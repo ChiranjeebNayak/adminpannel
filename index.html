@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Logo</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-users"></i><a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <i class="fas fa-users"></i><a href="#">Tactics Vault</a>
+                </li>
+                <li>
+                    <i class="fas fa-users"></i><a href="#">Teams</a>
+                </li>
+                <li class="active">
+                    <i class="fas fa-users"></i><a href="#">Schedule Generator</a>
+                </li>
+                <li>
+                    <i class="fas fa-users"></i><a href="#">Weekly Training Plans</a>
+                </li>
+                <li>
+                    <i class="fas fa-users"></i><a href="#">Team Matrics</a>
+                </li>
+                <li>
+                    <i class="fas fa-users"></i><a href="#">customization</a>
+                </li>
+            </ul>
+            <div class="team">
+                <h5>Select Your Team</h5>
+                <select class="custom-select" name="cars" id="cars">
+                    <option value="volvo">Team</option>
+                    <option value="Team1">Team 1</option>
+                    <option value="Team2">Team 2</option>
+                    <option value="Team3">Team 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="header">
+                <div class="left">
+                    <ul>
+                        <li class="li_active"><a href="#" class="active"> Teams</a></li>
+                        <li><a href="#"> U23 </a></li>
+                        <li><a href="#"> U19</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <div class="profile_img"></div>
+                        </li>
+                        <li>
+                            <select class="custom-select" name="marcus" id="name">
+                                <option value="marcus">Marcus</option>
+                                <option value="Team1">Profile</option>
+                                <option value="Team2">Setting</option>
+                                <option value="Team3">logout</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero">
+                <div class="left ">
+                    <button class="btn" onclick="openForm()">Add New Schedule</button>
+                    <div class="form-popup" id="myForm">
+                        <form action="" class="form-container">
+                          <h1>Create New Schedule</h1>
+                          <div class="row">
+                            <div class="name">
+                                <label for="email"><b>Schedule Name</b></label>
+                                <input type="text" placeholder="Enter Name" name="email" required>
+                            </div>
+                          </div>
+                      
+                          <div class="row">
+                                <div class="start">
+                                    
+                                    <select type="date">
+                                        <option>Select start Date</option>
+                                        <option>January</option>
+                                        <option>February</option>
+                                        <option>March</option>
+                                    </select>
+                                </div>
+                                <div class="end">
+                                    <select type="date">
+                                        <option>Select End Date</option>
+                                        <option>January</option>
+                                        <option>February</option>
+                                        <option>March</option>
+                                    </select>
+                                </div>
+                                <div class="week">
+                                    <input type="text" placeholder="Enter No. of Weeks">
+                                </div>
+                          </div>
+                      
+                          
+                          <div class="row">
+                            <button type="button" class="cancel" onclick="closeForm()">Close</button>
+                            <button type="submit" class="create">Create</button>
+                          </div>
+                        </form>
+                      </div>
+                </div>
+                <div class="right">
+                    <input type="text" name="search" id="search" placeholder="&#xF002;  Search Your Schedule" />
+                </div>
+            </div>
+            <div class="info">
+                <div class="schedule">
+                    <div class="card">
+                        <button type="button" class="collapsible">
+                            <h4>Winter Training Schedule</h4><span class="title">4 weeks | 12 Sessions</span>
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div class="date">
+                                    <div class="start">
+                                        Start date
+                                        <span>25 January 2020</span>
+                                    </div>
+                                    <div class="end">
+                                        End date
+                                        <span>19 February 2020</span>
+                                    </div>
+                                </div>
+                                <div class="updatebtn">
+                                    <button class="btn">Update</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio1" /> <label for="radio1">Sunday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio2" /> <label for="radio2">Monday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio3" /> <label for="radio3">Tuesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio4" /> <label
+                                        for="radio4">Wednesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio5" /> <label for="radio5">Thursday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio6" /> <label for="radio6">Friday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio7" /> <label for="radio7">Saturday</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button type="button" class="collapsible">
+                            <h4>Winter Training Schedule</h4><span class="title">4 weeks | 12 Sessions</span>
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div class="date">
+                                    <div class="start">
+                                        Start date
+                                        <span>25 January 2020</span>
+                                    </div>
+                                    <div class="end">
+                                        End date
+                                        <span>19 February 2020</span>
+                                    </div>
+                                </div>
+                                <div class="updatebtn">
+                                    <button class="btn">Update</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio1" /> <label for="radio1">Sunday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio2" /> <label for="radio2">Monday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio3" /> <label for="radio3">Tuesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio4" /> <label
+                                        for="radio4">Wednesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio5" /> <label for="radio5">Thursday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio6" /> <label for="radio6">Friday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio7" /> <label for="radio7">Saturday</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button type="button" class="collapsible">
+                            <h4>Winter Training Schedule</h4><span class="title">4 weeks | 12 Sessions</span>
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div class="date">
+                                    <div class="start">
+                                        Start date
+                                        <span>25 January 2020</span>
+                                    </div>
+                                    <div class="end">
+                                        End date
+                                        <span>19 February 2020</span>
+                                    </div>
+                                </div>
+                                <div class="updatebtn">
+                                    <button class="btn">Update</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio1" /> <label for="radio1">Sunday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio2" /> <label for="radio2">Monday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio3" /> <label for="radio3">Tuesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio4" /> <label
+                                        for="radio4">Wednesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio5" /> <label for="radio5">Thursday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio6" /> <label for="radio6">Friday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio7" /> <label for="radio7">Saturday</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><div class="card">
+                        <button type="button" class="collapsible">
+                            <h4>Winter Training Schedule</h4><span class="title">4 weeks | 12 Sessions</span>
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div class="date">
+                                    <div class="start">
+                                        Start date
+                                        <span>25 January 2020</span>
+                                    </div>
+                                    <div class="end">
+                                        End date
+                                        <span>19 February 2020</span>
+                                    </div>
+                                </div>
+                                <div class="updatebtn">
+                                    <button class="btn">Update</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio1" /> <label for="radio1">Sunday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio2" /> <label for="radio2">Monday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio3" /> <label for="radio3">Tuesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio4" /> <label
+                                        for="radio4">Wednesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio5" /> <label for="radio5">Thursday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio6" /> <label for="radio6">Friday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio7" /> <label for="radio7">Saturday</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button type="button" class="collapsible">
+                            <h4>Winter Training Schedule</h4><span class="title">4 weeks | 12 Sessions</span>
+                            <!-- <span class="editicon">edit</span>
+                            <span class="deleteicon">delete</span> -->
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div class="date">
+                                    <div class="start">
+                                        Start date
+                                        <span>25 January 2020</span>
+                                    </div>
+                                    <div class="end">
+                                        End date
+                                        <span>19 February 2020</span>
+                                    </div>
+                                </div>
+                                <div class="updatebtn">
+                                    <button class="btn">Update</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio1" /> <label for="radio1">Sunday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio2" /> <label for="radio2">Monday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio3" /> <label for="radio3">Tuesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio4" /> <label
+                                        for="radio4">Wednesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio5" /> <label for="radio5">Thursday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio6" /> <label for="radio6">Friday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio7" /> <label for="radio7">Saturday</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><div class="card">
+                        <button type="button" class="collapsible">
+                            <h4>Winter Training Schedule</h4><span class="title">4 weeks | 12 Sessions</span>
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div class="date">
+                                    <div class="start">
+                                        Start date
+                                        <span>25 January 2020</span>
+                                    </div>
+                                    <div class="end">
+                                        End date
+                                        <span>19 February 2020</span>
+                                    </div>
+                                </div>
+                                <div class="updatebtn">
+                                    <button class="btn">Update</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio1" /> <label for="radio1">Sunday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio2" /> <label for="radio2">Monday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio3" /> <label for="radio3">Tuesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio4" /> <label
+                                        for="radio4">Wednesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio5" /> <label for="radio5">Thursday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio6" /> <label for="radio6">Friday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio7" /> <label for="radio7">Saturday</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><div class="card">
+                        <button type="button" class="collapsible">
+                            <h4>Winter Training Schedule</h4><span class="title">4 weeks | 12 Sessions</span>
+                        </button>
+                        <div class="content">
+                            <div class="row">
+                                <div class="date">
+                                    <div class="start">
+                                        Start date
+                                        <span>25 January 2020</span>
+                                    </div>
+                                    <div class="end">
+                                        End date
+                                        <span>19 February 2020</span>
+                                    </div>
+                                </div>
+                                <div class="updatebtn">
+                                    <button class="btn">Update</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio1" /> <label for="radio1">Sunday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio2" /> <label for="radio2">Monday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio3" /> <label for="radio3">Tuesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio4" /> <label
+                                        for="radio4">Wednesday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio5" /> <label for="radio5">Thursday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio6" /> <label for="radio6">Friday</label>
+                                </div>
+                                <div class="day">
+                                    <input type="radio" name="radio" id="radio7" /> <label for="radio7">Saturday</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.getElementsByName("body").style.opacity="0.5";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
